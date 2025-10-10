@@ -1,47 +1,94 @@
 /*
-  
-    SIMPLE CALCULATOR CHALLENGE
-  
 
-  Instructions for Students:
-  1. Ask the user to enter:
-       - First number
-       - Operator (+, -, *, /, %)
-       - Second number
-  2. Use if...else OR switch to perform the calculation
-  3. Display the result in the console
-  4. Check if the result is even or odd
-  5. Add a loop so the calculator repeats until the user says "no" or cancels
-  6. Write all the code yourself; do not copy from AI or other sources
-  
+    SIMPLE CALCULATOR CHALLENGE 
+
+
+ Instructions for Students:
+  ----------------------------------------------------------
+  1 Run this file in your browser console or VS Code terminal.
+  2 Ask the user to enter:
+        - First number
+        - Operator (+, -, *, /, %)
+        - Second number
+  3 Use either:
+        - if...else statements
+          OR
+        - switch case statements
+  4 Display the result in the console.
+  5 Check if the result is even or odd.
+  6 Add a loop so the calculator repeats
+      until the user says "no" or clicks cancel.
+
+   Tips:
+  ----------------------------------------------------------
+   - Use prompt() to get user input.
+   - Use console.log() to display the result.
+   - Use confirm() to ask if the user wants to continue.
+   - Be creative, make it your own!
+   - Don’t copy from AI. The teacher will check for originality.
+
+
 */
 
 //  Step 1: Create a loop to repeat your calculator
-// TODO: Start your loop (while, do...while, or for loop)
+// TODO: Start your loop (while or do...while or for loop)
 
 // Inside your loop:
 // ------------------------------
-//  Step 2: Ask the user for inputs
-// TODO: Get the first number
-// TODO: Get the operator (+, -, *, /, %)
-// TODO: Get the second number
+// TODO: Ask the user for the first number
+// TODO: Ask the user for the operator (+, -, *, /, %)
+// TODO: Ask the user for the second number
 
-//  Step 3: Perform calculation
-// TODO: Use if...else OR switch to calculate the result
-// TODO: Store the result in a variable
+// TODO: Do the calculation (use if...else or switch)
+// TODO: Display the result in console
 
-//  Step 4: Display the result
-// TODO: Log the result in the console
+// TODO: Check if result is even or odd
+// TODO: Ask user if they want to calculate again
+// If user says "no" or clicks cancel, stop the loop
 
-//  Step 5: Check if the result is even or odd
-// TODO: Use the result to determine if it is even or odd and log it
+//  Remember: Write the code yourself so you can understand it!
+// SIMPLE CALCULATOR CHALLENGE
 
-//  Step 6: Ask the user if they want to calculate again
-// TODO: Use confirm() or prompt() to repeat the loop
-// If user says "no" or cancels, stop the loop
+do {
+  // Ask for input
+  let num1 = Number(prompt("Enter the first number:"));
+  let operator = prompt("Enter an operator (+, -, *, /, %):");
+  let num2 = Number(prompt("Enter the second number:"));
+  let result;
 
-//  Step 7: Optional functions for autograder
-// TODO: Implement a function calculate(num1, operator, num2) that returns the result
-// TODO: Implement a function isEven(num) that returns true if even, false if odd
+  // Do the calculation
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    case '/':
+      result = num1 / num2;
+      break;
+    case '%':
+      result = num1 % num2;
+      break;
+    default:
+      console.log("Invalid operator!");
+      continue; // skip the rest and ask again
+  }
 
-//  Remember: Leave all TODOs for you to complete! No answers are given.
+  // Display result
+  console.log(`Result: ${result}`);
+
+  // Check even or odd
+  if (result % 2 === 0) {
+    console.log("The result is even.");
+  } else {
+    console.log("The result is odd.");
+  }
+
+  // Ask if user wants to continue
+} while (confirm("Do you want to calculate again?"));
+
+console.log("Calculator closed. Goodbye!");
