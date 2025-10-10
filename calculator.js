@@ -55,40 +55,4 @@ do {
   let operator = prompt("Enter an operator (+, -, *, /, %):");
   let num2 = Number(prompt("Enter the second number:"));
   let result;
-
-  // Do the calculation
-  switch (operator) {
-    case '+':
-      result = num1 + num2;
-      break;
-    case '-':
-      result = num1 - num2;
-      break;
-    case '*':
-      result = num1 * num2;
-      break;
-    case '/':
-      result = num1 / num2;
-      break;
-    case '%':
-      result = num1 % num2;
-      break;
-    default:
-      console.log("Invalid operator!");
-      continue; // skip the rest and ask again
-  }
-
-  // Display result
-  console.log(`Result: ${result}`);
-
-  // Check even or odd
-  if (result % 2 === 0) {
-    console.log("The result is even.");
-  } else {
-    console.log("The result is odd.");
-  }
-
-  // Ask if user wants to continue
-} while (confirm("Do you want to calculate again?"));
-
-console.log("Calculator closed. Goodbye!");
+}
